@@ -1,0 +1,12 @@
+<input type="text" ng-model="search"/>
+
+<table style="display: block">
+    <tr ng-repeat="profile in profiles | filter:search | limitTo : 100">
+        <td><a ng-click="display(profile)">{{profile}}</a></td>
+        <td rowspan="100"><div id="display"></div></td>
+    </tr>
+
+</table>
+
+
+

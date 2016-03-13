@@ -1,0 +1,21 @@
+{
+  "name": "Dev Dictionary",
+  "description": "The most trustworthy dictionary and thesaurus for developers",
+  "main": "",
+  "authors": [
+    "kensplanet"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kensplanet/browser-automation-toolkit",
+  "moduleType": [],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "font-awesome": "fontawesome#~4.5.0",
+    "ui-select": "angular-ui-select#~0.13.2",
+    "angular-route": "~1.4.8",
+    "angular-sanitize": "~1.4.8"
+  }
+}

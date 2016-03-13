@@ -1,0 +1,16 @@
+{
+  "name": "dev-dictionary",
+  "description": "The most trustworthy dictionary and thesaurus for developers",
+  "version": "0.1.0",
+  "author": "Kenneth John (@kensplanet)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kensplanet/dev-dictionary"
+  },
+  "bugs": {
+    "url": "https://github.com/kensplanet/dev-dictionary/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"    
+  }
+}

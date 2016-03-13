@@ -1,0 +1,50 @@
+<html ng-app="app" ng-csp>
+<head>
+    <title>Dev Dictionary</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- Stylesheets -->
+    <!-- build:css css/styles.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="bower_components/ui-select/dist/select.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="lib/select2/select2.css">
+    <!-- endbuild -->
+
+    <!-- Scripts -->
+    <!-- build:js js/scripts.js -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="bower_components/ui-select/dist/select.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+    <script src="js/modules.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/run.js"></script>
+    <script src="js/version.js"></script>
+
+
+    <script src="js/controllers/dictionary-controller.js"></script>
+
+
+    <script src="js/directives/header-directive.js"></script>
+    <script src="js/directives/footer-directive.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+<div id="main" class="container-fluid">
+    <div header></div>
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+    <div footer></div>
+</div>
+</body>
+
+</html>

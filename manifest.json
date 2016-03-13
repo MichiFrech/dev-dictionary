@@ -1,0 +1,25 @@
+{
+  "name": "Dev Dictionary",
+  "description": "The most trustworthy dictionary and thesaurus for developers",
+  "version": "0.1.0",
+  "browser_action": {
+    "default_icon": "img/logo.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "<all_urls>",
+    "activeTab",
+    "webNavigation",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "icons": {
+    "16": "img/logo.png",
+    "48": "img/logo.png",
+    "128": "img/logo.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}
