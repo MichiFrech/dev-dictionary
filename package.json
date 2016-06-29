@@ -10,6 +10,9 @@
   "bugs": {
     "url": "https://github.com/kensplanet/dev-dictionary/issues"
   },
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
   "devDependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0"

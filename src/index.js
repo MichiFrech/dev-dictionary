@@ -5,4 +5,4 @@ class App extends Component {
 
 }
 
-export default App;
+ReactDOM.render(<App />, document.querySelector('.container'));
