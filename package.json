@@ -10,7 +10,8 @@
   "bugs": {
     "url": "https://github.com/kensplanet/dev-dictionary/issues"
   },
-  "devDependencies": {
-    "grunt": "^0.4.5"    
+  "devDependencies": {},
+  "dependencies": {
+    "webpack": "^1.13.1"
   }
 }
