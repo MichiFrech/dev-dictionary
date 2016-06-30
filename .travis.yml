@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '0.12'
 before_install:
-- openssl aes-256-cbc -K $encrypted_09806a890a57_key -iv $encrypted_09806a890a57_iv -in travis.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_09806a890a58_key -iv $encrypted_09806a890a58_iv -in travis.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - npm install -g webpack
 install:
