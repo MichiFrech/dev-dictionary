@@ -8,4 +8,4 @@ before_install:
 install:
   - npm install
 before_script: grunt
-after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PubkeyAuthentication=yes -o PasswordAuthentication=no css kensplanet@107.180.50.184:/home/kensplanet/public_html/dev-dictionary
+after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PubkeyAuthentication=yes -o PasswordAuthentication=no index.html bundle.js css kensplanet@107.180.50.184:/home/kensplanet/public_html/dev-dictionary
