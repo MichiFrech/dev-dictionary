@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components.header';
 import SearchBar from './components/searchBar';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <SearchBar />
+                <Header />
             </div>
         );
     }
