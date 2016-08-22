@@ -9,7 +9,6 @@
   "homepage": "https://github.com/kensplanet/browser-automation-toolkit",
   "moduleType": [],
   "dependencies": {
-    "jquery": "^3.1.0",
-    "bootstrap": "^3.3.7"
+
   }
 }
