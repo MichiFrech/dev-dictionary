@@ -8,7 +8,7 @@ class Header extends Component {
 
     render() {
         return (
-            <h1>Dev Dictionary</h1>
+            <h1><b>Dev Dictionary</b></h1>
         );
     }
 }

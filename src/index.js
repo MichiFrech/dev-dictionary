@@ -10,9 +10,10 @@ class App extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid text-center">
                 <Header />
                 <SearchBar />
+                <hr />
             </div>
         );
     }
