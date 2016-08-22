@@ -8,7 +8,9 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <h1>Dev Dictionary</h1>
+            <div className="form-group">
+                <input type="text" class="form-control" id="technology" placeholder="Enter technology (like React)"/>
+            </div>
         );
     }
 }
