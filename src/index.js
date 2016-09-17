@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/header';
 import SearchBar from './containers/searchBar';
+import t from './components/technologies';
 import $ from 'jquery';
+import 'bootstrap-loader';
 
 class App extends Component {
     constructor(props) {

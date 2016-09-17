@@ -8,13 +8,27 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        loaders: [{
-            exclude: /node_modules/,
-            loader: 'babel-loader'
-        }]
-    },
-    resolve: {
-        extensions: ['', '.js', '.jsx']
+            loaders: [
+            {
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                include: [
+                    __dirname
+                ],
+                loader: 'css-loader'
+            },
+            {
+                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                loader: 'file-loader'
+            },
+            {
+                test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
+                loader: 'imports?jQuery=jquery'
+            }
+        ]
     },
     devServer: {
         historyApiFallback: true,
