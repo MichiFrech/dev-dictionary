@@ -1,5 +1,4 @@
-var path = require('path');
-var webpackUglifyJsPlugin = require('webpack-uglify-js-plugin');
+var webpack = require('webpack');
 
 module.exports = {
     entry: [
@@ -34,15 +33,8 @@ module.exports = {
             ]
     },
     plugins: [
-        new webpackUglifyJsPlugin({
-            cacheFolder: path.resolve(__dirname, './public/webpack_cached/'),
-            debug: true,
-            minimize: true,
-            sourceMap: false,
-            output: {
-                comments: false
-            },
-            compressor: {
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
                 warnings: false
             }
         })
