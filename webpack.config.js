@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: __dirname,
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: 'dist/bundle.js'
     },
     module: {
                 loaders: [
@@ -24,7 +24,7 @@ module.exports = {
                 },
                 {
                     test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                    loader: 'file-loader'
+                    loader: 'file-loader?name=dist/[hash].[ext]'
                 },
                 {
                     test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
