@@ -9,12 +9,17 @@ class SearchBar extends Component {
 
     }
 
+    onChange(a) {
+        console.log(a);
+
+    }
+
     render() {
 
         return (
             <div className="form-group">
 
-            <Search className="col-md-2" items={this.props.dictionary} placeholder='Enter a technology (like React)'/>
+            <Search items={this.props.dictionary} onChange={this.onChange} placeholder='Enter a technology (like React)'/>
 
             </div>
         );
