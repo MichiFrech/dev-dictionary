@@ -9,9 +9,10 @@ class Technologies extends Component {
     }
 
     renderDictionaryList() {
-        return this.props.dictionary.map ((tech) => {
+        return this.props.dictionary.map ((technolgy, index) => {
+            if (index > 100) {return;}
             return (
-                    <div key={tech} className="technologies">{tech}</div>
+                    <div key={technolgy} className="col-md-2 technologies">{technolgy}</div>
 
             );
         });
