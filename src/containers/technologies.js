@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import '../../css/dev-dictionary.css';
-
+import a from '../../css/dev-dictionary.css';
 
 class Technologies extends Component {
     constructor(props) {
@@ -12,7 +11,7 @@ class Technologies extends Component {
     renderDictionaryList() {
         return this.props.dictionary.map ((tech) => {
             return (
-                    <div className="technologies">{tech}</div>
+                    <div key={tech} className="technologies">{tech}</div>
 
             );
         });
