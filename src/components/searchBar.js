@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Search from 'react-search';
+import { connect } from 'react-redux';
+import '../../css/dev-dictionary.css';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -7,12 +10,19 @@ class SearchBar extends Component {
     }
 
     render() {
+
         return (
             <div className="form-group">
-                <input type="text" className="form-control" id="technology" placeholder="Enter a technology (like React)"/>
+
+            <Search className="col-md-2" items={this.props.dictionary} placeholder='Enter a technology (like React)'/>
+
             </div>
         );
     }
 }
 
-export default SearchBar;
+function mapStateToProps({ dictionary }) {
+    return { dictionary };
+}
+
+export default connect(mapStateToProps)(SearchBar);
