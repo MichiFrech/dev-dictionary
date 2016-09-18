@@ -10,30 +10,24 @@ class Technologies extends Component {
     }
 
     renderDictionaryList() {
-        console.log(this.props.dictionary);
         return this.props.dictionary.map ((tech) => {
             return (
-                <li>
-                    {tech}
-                </li>
+                    <div className="technologies">{tech}</div>
+
             );
         });
     }
 
     render() {
         return (
-          <ul>
-            {this.renderDictionaryList()}
-          </ul>
-        );
+            <div>{this.renderDictionaryList()}</div>
+          );
 
     }
 }
-
 
 function mapStateToProps({ dictionary }) {
     return { dictionary };
 }
 
 export default connect(mapStateToProps)(Technologies);
-
