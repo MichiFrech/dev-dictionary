@@ -1,26 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/header';
-import SearchBar from './containers/searchBar';
-import t from './components/technologies';
-import $ from 'jquery';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import 'bootstrap-loader';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-    }
+import App from './components/app';
+import reducers from './reducers/index';
 
-    render() {
-        return (
-            <div className="container-fluid text-center">
-                <Header />
-                <SearchBar />
-                <hr />
-            </div>
-        );
-    }
-
-}
-
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(
+<Provider store={createStore(reducers)}>
+    <App />
+    </Provider>
+    , document.querySelector('.container'));

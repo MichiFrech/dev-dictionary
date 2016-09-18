@@ -9,7 +9,7 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="form-group">
-                <input type="text" className="form-control" id="technology" placeholder="Enter technology (like React)"/>
+                <input type="text" className="form-control" id="technology" placeholder="Enter a technology (like React)"/>
             </div>
         );
     }
