@@ -1,7 +1,8 @@
 import React from 'react';
 import {Component} from 'react';
-import Header from './header';
-import SearchBar from '../containers/searchBar';
+import Header from '../components/header';
+import SearchBar from '../components/searchBar';
+import Technologies from './technologies';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchDictionary } from '../actions/index';
@@ -15,10 +16,11 @@ class App extends Component {
     render() {
         return (
             < div >
-            < Header / >
-            < SearchBar / >
+                < Header / >
+                < SearchBar / >
+                < Technologies />
             < / div >
-    );
+        );
     }
 }
 
