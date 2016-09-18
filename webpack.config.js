@@ -29,6 +29,9 @@ module.exports = {
                 {
                     test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
                     loader: 'imports?jQuery=jquery'
+                },
+                { test: /\.json$/,
+                    loader: 'json-loader'
                 }
             ]
     },

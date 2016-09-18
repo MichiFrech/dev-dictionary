@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import 'bootstrap-loader';
 
 import App from './components/app';
-import reducers from './reducers/index';
+import reducers from './reducers';
 
 ReactDOM.render(
 <Provider store={createStore(reducers)}>
