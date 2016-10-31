@@ -2,23 +2,42 @@ import React, {Component} from 'react';
 import Search from 'react-search';
 import { connect } from 'react-redux';
 import '../../css/dev-dictionary.css';
-import $ from 'jquery';
+import _ from 'lodash';
 
 class SearchBar extends Component {
+
     constructor(props) {
         super(props);
+        this.filteredList = this.props.dictionary.splice(100);
+        this.onChange = this.onChange.bind(this);
 
     }
-    a(x) {
-        return;
+    onChange(event) {
+        this.filteredList = _.filter(this.props.dictionary, function(o) { return o.indexOf(event.target.value) > -1; });
+        this.filteredList = this.filteredList.splice(100);
+    }
+
+    technologies() {
+        console.log(this.filteredList);
+        return _.forEach(this.filteredList, function(technology) {
+                return (
+                    <div>{technology}</div>
+            );
+            });
+
     }
 
 
     render() {
         return (
+             <div>
             <div className="form-group">
-            <Search items={this.props.dictionary} onChange={this.a}  placeholder='Enter a technology (like React)'/>
+                <input type="text" onChange = {this.onChange} placeholder="Enter a technology (like React)" className="form-control"/>
 
+            </div>
+            <div>
+                {this.filteredList}
+            </div>
             </div>
         );
     }
