@@ -12,10 +12,15 @@ class App extends Component {
         super(props);
         this.props.fetchDictionary();
         this.update = this.update.bind(this);
+        this.state = {
+            filteredList: []
+        };
     }
 
     update(technologies) {
-        this.filteredList = technologies;
+        this.setState({
+            filteredList: technologies
+        });
     }
 
     render() {
@@ -23,7 +28,7 @@ class App extends Component {
             < div className="container-fluid" >
                 < Header / >
                 < SearchBar onSearchTermChange={this.update}/ >
-                < Technologies technologies={this.filteredList} / >
+                < Technologies technologies={this.state.filteredList} / >
             < / div >
         );
     }

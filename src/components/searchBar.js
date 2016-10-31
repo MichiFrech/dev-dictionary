@@ -13,8 +13,7 @@ class SearchBar extends Component {
     }
     onChange(event) {
         this.filteredList = _.filter(this.props.dictionary, function(o) { return o.indexOf(event.target.value) > -1; });
-        this.filteredList > 100 ? this.filteredList.splice(100) : this.filteredList;
-        console.log(this.filteredList);
+        this.filteredList.length > 100 ? this.filteredList.splice(100) : this.filteredList;
         this.props.onSearchTermChange(this.filteredList);
     }
 

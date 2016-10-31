@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
+import '../../css/dev-dictionary.css';
 
 class Technologies extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class Technologies extends Component {
     technologies() {
         return _.forEach(this.props.technologies, function(technology) {
             return (
-                <div>{technology}</div>
+                <div className="technologies">{technology}</div>
             );
         });
 
