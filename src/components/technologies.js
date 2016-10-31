@@ -11,17 +11,18 @@ class Technologies extends Component {
     render() {
         return (
             <div>
-             {this.technologies()}
+              {this.technologies()}
             </div>
     );
     }
 
     technologies() {
-        return _.forEach(this.props.technologies, function(technology) {
+        return this.props.technologies.map((technology) => {
             return (
-                <div className="technologies">{technology}</div>
+             <div className="technologies" key={technology}>{technology}</div>
             );
         });
+
 
     }
 }
