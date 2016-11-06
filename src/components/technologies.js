@@ -14,7 +14,8 @@ class Technologies extends Component {
         this.open = this.open.bind(this);
         this.close = this.close.bind(this);
         this.state = {
-            showModal: false
+            showModal: false,
+            technologyDetails: ''
         };
     }
 
@@ -34,7 +35,7 @@ class Technologies extends Component {
                         <Modal.Title>Modal heading</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                        <div id="display"></div>
+                        <div>{this.state.technologyDetails}</div>
                             </Modal.Body>
                             <Modal.Footer>
                             <Button onClick={this.close}>Close</Button>
@@ -47,7 +48,13 @@ class Technologies extends Component {
 
     displayDetails(technology) {
         this.setState({ showModal: true });
-        this.props.fetchTechnologyDetails(technology);
+        var that = this;
+        this.props.fetchTechnologyDetails(technology).then(function() {
+            that.setState({
+                technologyDetails: that.props.technologyDetails
+            });
+
+        });
     }
 
     technologies() {
@@ -58,8 +65,6 @@ class Technologies extends Component {
                 </div>
             );
         });
-
-
     }
 }
 
@@ -67,8 +72,8 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchTechnologyDetails }, dispatch);
 }
 
-function mapStateToProps({ dictionary }) {
-    return { dictionary };
+function mapStateToProps({ technologyDetails }) {
+    return { technologyDetails };
 }
 
-export default connect(null, mapDispatchToProps)(Technologies);
+export default connect(mapStateToProps, mapDispatchToProps)(Technologies);

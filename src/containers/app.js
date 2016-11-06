@@ -38,8 +38,8 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchDictionary }, dispatch);
 }
 
-function mapStateToProps({ dictionary }) {
-    return { dictionary };
+function mapStateToProps(state) {
+    return { dictionary: state.dictionary.FETCH_DICTIONARY };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

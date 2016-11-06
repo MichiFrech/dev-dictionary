@@ -5,7 +5,7 @@ import TechnologyReducer from './reducer_technology';
 
 const rootReducer = combineReducers({
     dictionary: DictionaryReducer,
-    technologies: TechnologyReducer
+    technologyDetails: TechnologyReducer
 });
 
 export default rootReducer;
