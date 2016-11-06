@@ -13,3 +13,8 @@
     -o-transition: color 0.15s ease, background 0.15s ease, border 0.15s ease;
     transition: color 0.15s ease, background 0.15s ease, border 0.15s ease;
 }
+
+.logo {
+    width: 32px;
+    margin-right: 16px;
+}
