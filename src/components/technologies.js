@@ -15,7 +15,8 @@ class Technologies extends Component {
         this.close = this.close.bind(this);
         this.state = {
             showModal: false,
-            technologyDetails: ''
+            technologyDetails: '',
+            technology:''
         };
     }
 
@@ -32,7 +33,7 @@ class Technologies extends Component {
             <div>
                 <Modal show={this.state.showModal} onHide={this.close}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
+                        <Modal.Title><b>{this.state.technology}</b></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                         <div dangerouslySetInnerHTML={{__html: this.state.technologyDetails}}></div>
@@ -47,11 +48,12 @@ class Technologies extends Component {
     }
 
     displayDetails(technology) {
-        this.setState({ showModal: true });
         var that = this;
         this.props.fetchTechnologyDetails(technology).then(function() {
             that.setState({
-                technologyDetails: that.props.technologyDetails
+                showModal: true,
+                technologyDetails: that.props.technologyDetails,
+                technology: technology
             });
 
         });
