@@ -6,7 +6,6 @@ import Technologies from '../components/technologies';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchDictionary } from '../actions/index';
-import {Modal, Button} from 'react-bootstrap';
 
 class App extends Component {
     constructor(props) {
@@ -27,30 +26,10 @@ class App extends Component {
         });
     }
 
-    close() {
-        this.setState({ showModal: false });
-    }
-
-    open() {
-        this.setState({ showModal: true });
-    }
-
     render() {
         return (
             < div className="container-fluid" >
-            <Modal show={this.state.showModal} onHide={this.close}>
-                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-               </Modal.Header>
-                <Modal.Body>
-
-              </Modal.Body>
-               <Modal.Footer>
-                  <Button onClick={this.close}>Close</Button>
-              </Modal.Footer>
-        </Modal>
-
-        < Header / >
+                < Header / >
                 < SearchBar onSearchTermChange={this.update}/ >
                 < Technologies technologies={this.state.filteredList} / >
             < / div >
