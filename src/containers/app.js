@@ -5,7 +5,7 @@ import SearchBar from '../components/searchBar';
 import Technologies from '../components/technologies';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchDictionary } from '../actions/index';
+import { fetchDictionary } from '../actions/fetchDictionary';
 
 class App extends Component {
     constructor(props) {

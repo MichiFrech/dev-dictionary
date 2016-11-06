@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import _ from 'lodash';
+import $ from 'jquery';
 import '../../css/dev-dictionary.css';
 import {Modal, Button} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchTechnologyDetails } from '../actions/fetchTechnologyDetails';
+
 
 class Technologies extends Component {
     constructor(props) {
@@ -25,25 +29,25 @@ class Technologies extends Component {
     render() {
         return (
             <div>
-            <Modal show={this.state.showModal} onHide={this.close}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                    <div id="xx"></div>
-                        </Modal.Body>
-                        <Modal.Footer>
-                        <Button onClick={this.close}>Close</Button>
-                    </Modal.Footer>
-        </Modal>
-              {this.technologies()}
+                <Modal show={this.state.showModal} onHide={this.close}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                        <div id="display"></div>
+                            </Modal.Body>
+                            <Modal.Footer>
+                            <Button onClick={this.close}>Close</Button>
+                        </Modal.Footer>
+                </Modal>
+                {this.technologies()}
             </div>
     );
     }
 
     displayDetails(technology) {
-        console.log(technology);
-
+        this.setState({ showModal: true });
+        this.props.fetchTechnologyDetails(technology);
     }
 
     technologies() {
@@ -59,4 +63,12 @@ class Technologies extends Component {
     }
 }
 
-export default Technologies;
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchTechnologyDetails }, dispatch);
+}
+
+function mapStateToProps({ dictionary }) {
+    return { dictionary };
+}
+
+export default connect(null, mapDispatchToProps)(Technologies);
