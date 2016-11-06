@@ -55,7 +55,8 @@ class Technologies extends Component {
                 technologyDetails: that.props.technologyDetails,
                 technology: technology
             });
-            $('#technology').not('.post-text').remove();
+            $('#technology').html($('.post-text'));
+            $('#technology a').attr('target', '_blank');
         });
     }
 
