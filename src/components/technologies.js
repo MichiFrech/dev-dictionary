@@ -9,6 +9,9 @@ class Technologies extends Component {
         this.displayDetails = this.displayDetails.bind(this);
         this.open = this.open.bind(this);
         this.close = this.close.bind(this);
+        this.state = {
+            showModal: false
+        };
     }
 
     close() {

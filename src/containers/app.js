@@ -13,11 +13,8 @@ class App extends Component {
         this.props.fetchDictionary();
         this.update = this.update.bind(this);
         this.state = {
-            filteredList: [],
-            showModal: true
+            filteredList: []
         };
-        this.open = this.open.bind(this);
-        this.close = this.close.bind(this);
     }
 
     update(technologies) {
