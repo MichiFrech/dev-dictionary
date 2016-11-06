@@ -30,7 +30,16 @@ module.exports = {
                 {
                     test: /\.json$/,
                     loader: 'json-loader'
-                }
+                },
+                    {
+                        test: /\.jsx?$/,         // Match both .js and .jsx files
+                        exclude: /node_modules/,
+                        loader: "babel",
+                        query:
+                        {
+                            presets:['react']
+                        }
+                    }
             ]
     },
     plugins: [

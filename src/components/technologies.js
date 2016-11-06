@@ -35,7 +35,7 @@ class Technologies extends Component {
                         <Modal.Title>Modal heading</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                        <div>{this.state.technologyDetails}</div>
+                        <div dangerouslySetInnerHTML={{__html: this.state.technologyDetails}}></div>
                             </Modal.Body>
                             <Modal.Footer>
                             <Button onClick={this.close}>Close</Button>
