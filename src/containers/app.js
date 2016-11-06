@@ -10,11 +10,18 @@ import { fetchDictionary } from '../actions/fetchDictionary';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.props.fetchDictionary();
-        this.update = this.update.bind(this);
         this.state = {
             filteredList: []
         };
+        var that = this;
+        this.props.fetchDictionary().then(function() {
+            var clone = that.props.dictionary.slice(0);
+            clone.splice(100);
+            that.setState({
+                filteredList: clone
+            });
+        });
+        this.update = this.update.bind(this);
     }
 
     update(technologies) {
@@ -24,6 +31,7 @@ class App extends Component {
     }
 
     render() {
+
         return (
             < div className="container-fluid" >
                 < Header / >
@@ -38,8 +46,8 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchDictionary }, dispatch);
 }
 
-function mapStateToProps(state) {
-    return { dictionary: state.dictionary.FETCH_DICTIONARY };
+function mapStateToProps({ dictionary }) {
+    return { dictionary };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -36,7 +36,7 @@ class Technologies extends Component {
                         <Modal.Title><b>{this.state.technology}</b></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                        <div dangerouslySetInnerHTML={{__html: this.state.technologyDetails}}></div>
+                        <div id="technology" dangerouslySetInnerHTML={{__html: this.state.technologyDetails}}></div>
                             </Modal.Body>
                             <Modal.Footer>
                             <Button onClick={this.close}>Close</Button>
@@ -55,7 +55,7 @@ class Technologies extends Component {
                 technologyDetails: that.props.technologyDetails,
                 technology: technology
             });
-
+            $('#technology').not('.post-text').remove();
         });
     }
 
