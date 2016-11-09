@@ -10,4 +10,4 @@ install:
 - npm install
 before_script: webpack
 after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o
-  PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dist kensplanet@107.180.50.184:/home/kensplanet/public_html/dev-dictionary
+  PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dist dictionary img kensplanet@107.180.50.184:/home/kensplanet/public_html/dev-dictionary
