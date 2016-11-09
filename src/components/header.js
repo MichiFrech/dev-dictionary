@@ -8,7 +8,11 @@ class Header extends Component {
 
     render() {
         return (
-            <h1><b>Dev Dictionary</b></h1>
+            <h1>
+                <img src="img/logo.png" className="logo"/>
+                <b>Dev Dictionary</b>
+            </h1>
+
         );
     }
 }

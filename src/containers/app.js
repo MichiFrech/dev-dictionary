@@ -5,16 +5,23 @@ import SearchBar from '../components/searchBar';
 import Technologies from '../components/technologies';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchDictionary } from '../actions/index';
+import { fetchDictionary } from '../actions/fetchDictionary';
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.props.fetchDictionary();
-        this.update = this.update.bind(this);
         this.state = {
             filteredList: []
         };
+        var that = this;
+        this.props.fetchDictionary().then(function() {
+            var clone = that.props.dictionary.slice(0);
+            clone.splice(100);
+            that.setState({
+                filteredList: clone
+            });
+        });
+        this.update = this.update.bind(this);
     }
 
     update(technologies) {
@@ -24,6 +31,7 @@ class App extends Component {
     }
 
     render() {
+
         return (
             < div className="container-fluid" >
                 < Header / >

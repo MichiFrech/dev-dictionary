@@ -7,7 +7,6 @@ class SearchBar extends Component {
 
     constructor(props) {
         super(props);
-        this.filteredList = this.props.dictionary.splice(100);
         this.onChange = this.onChange.bind(this);
 
     }
