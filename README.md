@@ -2,7 +2,7 @@
 <p align="center">Automate data population for websites</p>
 <kbd><img src='https://github.com/kensplanet/dev-dictionary/blob/dev/screenshots/2.0.0-1.png?raw=true'/></kbd>
 ##Overview
-This is the repository of <b>Dev Dictionary</b>, a Chrome Extension to automate data population for websites. It can be installed through the [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-automation-toolki/giepfplammajibdgpkkigdejjhlhdlpc).
+This is the repository of <b>Dev Dictionary</b>, a Chrome Extension to help developers find information on any technology. It can be installed through the [Chrome Web Store](https://chrome.google.com/webstore/detail/dev-dictionary/mbhildcgplbobgnhgnihmeiaokhdaelf).
 
 <h2>Development</h2>
 * For more information regarding development of Chrome extensions, see [Getting Started: Building a Chrome Extension](https://developer.chrome.com/extensions/getstarted)
