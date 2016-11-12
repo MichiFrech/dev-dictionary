@@ -1,6 +1,6 @@
 <h1 align="center">Dev Dictionary</h1>
 <p align="center">Automate data population for websites</p>
-<img src='https://github.com/kensplanet/dev-dictionary/blob/dev/screenshots/2.0.0-1.png?raw=true'/>
+<kbd><img src='https://github.com/kensplanet/dev-dictionary/blob/dev/screenshots/2.0.0-1.png?raw=true'/></kbd>
 ##Overview
 This is the repository of <b>Dev Dictionary</b>, a Chrome Extension to automate data population for websites. It can be installed through the [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-automation-toolki/giepfplammajibdgpkkigdejjhlhdlpc).
 
