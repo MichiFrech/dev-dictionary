@@ -11,6 +11,7 @@ This is the repository of <b>Dev Dictionary</b>, a Chrome Extension to automate 
 <h2>Libraries</h2>
 * [React](https://facebook.github.io/react/)
 * [Redux](http://redux.js.org/)
+* [Webpack](https://webpack.github.io/)
 * [Node JS](https://nodejs.org)
 * [Bootstrap](http://getbootstrap.com/)
 * [jQuery](https://jquery.com/)
