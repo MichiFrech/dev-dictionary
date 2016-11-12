@@ -9,13 +9,7 @@ This is the repository of <b>Dev Dictionary</b>, a Chrome Extension to automate 
 * For more information regarding Chrome extension APIs, see [Chrome Platform APIs](https://developer.chrome.com/extensions/api_index)
 
 <h2>Libraries</h2>
-* [Angular JS](https://angularjs.org/)
+* [React](https://facebook.github.io/react/)
 * [Node JS](https://nodejs.org)
-* [Grunt](http://gruntjs.com/)
-* [Bower](http://bower.io/)
 * [Bootstrap](http://getbootstrap.com/)
 * [jQuery](https://jquery.com/)
-* [Select2](https://select2.github.io/)
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-* [vAccordion](http://lukaszwatroba.github.io/v-accordion/)
-* [platform.js](https://github.com/bestiejs/platform.js/)
