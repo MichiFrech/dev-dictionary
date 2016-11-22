@@ -1,6 +1,7 @@
 <h1 align="center">Dev Dictionary</h1>
 <p align="center">Find information on any technology</p>
-<kbd><img src='https://github.com/kensplanet/dev-dictionary/blob/master/screenshots/2.0.0-1.png?raw=true'/></kbd>
+<kbd>![image](https://cloud.githubusercontent.com/assets/4705188/20508600/ac62b414-b030-11e6-9dfe-691a6a3250fd.png)
+</kbd>
 ##Overview
 This is the repository of <b>Dev Dictionary</b>, a Chrome Extension to help developers find information on any technology. It can be installed through the [Chrome Web Store](https://chrome.google.com/webstore/detail/dev-dictionary/mbhildcgplbobgnhgnihmeiaokhdaelf).
 
