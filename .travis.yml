@@ -10,6 +10,7 @@ install:
 - npm install
 before_script:
 - webpack
+- rm dictionary.json
 - node dictionary.js
 - ./dictionary.sh
 after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o
