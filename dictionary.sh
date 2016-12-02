@@ -1,5 +1,4 @@
 if [ -f dictionary.json ]; then
-  cp dictionary.json dist/
   git config --global user.email "kensplanet@yahoo.com"
   git config --global user.name "kensplanet"
   git checkout master
