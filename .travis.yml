@@ -12,7 +12,7 @@ before_script:
 - webpack
 - rm dictionary.json
 - node dictionary.js
-- chmod a+x  ./dictionary.sh
+- chmod a+x ./dictionary.sh
 - ./dictionary.sh
 after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o
   PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dictionary.json dist kensplanet@107.180.50.184:/home/kensplanet/public_html/dev-dictionary
