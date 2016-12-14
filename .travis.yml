@@ -15,4 +15,4 @@ before_script:
 - chmod a+x ./dictionary.sh
 - ./dictionary.sh
 after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o
-  PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dictionary.json dist kensplanet@107.180.50.184:/home/kensplanet/public_html/dev-dictionary
+  PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dictionary.json dist ubuntu@34.193.114.124:/home/ubuntu/public/dev-dictionary
