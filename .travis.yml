@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '0.12'
+- '6.9.4'
 before_install:
 - openssl aes-256-cbc -K $encrypted_b7cbdf137cf7_key -iv $encrypted_b7cbdf137cf7_iv
   -in travis.enc -out ~/.ssh/id_rsa -d
@@ -10,9 +10,6 @@ install:
 - npm install
 before_script:
 - webpack
-- rm dictionary.json
-- node dictionary.js
-- chmod a+x ./dictionary.sh
-- ./dictionary.sh
+
 after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o
-  PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dictionary.json dist ubuntu@34.193.114.124:/home/ubuntu/public/dev-dictionary
+  PubkeyAuthentication=yes -o PasswordAuthentication=no index.html dist img ubuntu@34.193.114.124:/home/ubuntu/public/dev-dictionary
