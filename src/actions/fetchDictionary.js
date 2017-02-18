@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const DICTIONARY_URL = '/dictionary/dictionary.json';
+const DICTIONARY_FILE = 'dictionary.json';
 
 export const FETCH_DICTIONARY = 'FETCH_DICTIONARY';
 
 export function fetchDictionary() {
-    const dictionary = axios.get(DICTIONARY_URL);
+    const dictionary = axios.get(DICTIONARY_FILE);
 
     return {
         type: FETCH_DICTIONARY,
