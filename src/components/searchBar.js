@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
 import '../../css/dev-dictionary.css';
 import _ from 'lodash';
 
@@ -21,14 +20,9 @@ class SearchBar extends Component {
         return (
             <div className="form-group">
                 <input type="text" onChange = {this.onChange} placeholder="Enter a technology (like React)" className="form-control"/>
-
             </div>
         );
     }
 }
 
-function mapStateToProps({ dictionary }) {
-    return { dictionary };
-}
-
-export default connect(mapStateToProps)(SearchBar);
+export default SearchBar
