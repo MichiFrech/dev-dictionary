@@ -11,9 +11,4 @@ This is the repository of **Dev Dictionary**, a Chrome Extension to help develop
 * For more information regarding Chrome extension APIs, see [Chrome Platform APIs](https://developer.chrome.com/extensions/api_index)
 
 ## Libraries
-* [React](https://facebook.github.io/react/)
-* [Redux](http://redux.js.org/)
-* [Webpack](https://webpack.github.io/)
-* [Node JS](https://nodejs.org)
-* [Bootstrap](http://getbootstrap.com/)
-* [jQuery](https://jquery.com/)
+* [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/), [Webpack](https://webpack.github.io/), [NodeJS](https://nodejs.org), [Bootstrap](http://getbootstrap.com/), [jQuery](https://jquery.com/)
