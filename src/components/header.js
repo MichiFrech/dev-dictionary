@@ -10,7 +10,7 @@ class Header extends Component {
         return (
             <h1>
                 <img src="img/logo.png" className="logo"/>
-                <b>Dev Dictionary <small>v2.1.2</small></b>
+                <b>Dev Dictionary <small>v2.2.0</small></b>
             </h1>
 
         );
