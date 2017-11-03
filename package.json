@@ -3,6 +3,7 @@
   "description": "The most trustworthy dictionary and thesaurus for developers",
   "version": "2.2.0",
   "author": "Kenneth John (@kensplanet)",
+  "license" : "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/kensplanet/dev-dictionary"
