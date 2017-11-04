@@ -18,3 +18,11 @@
     width: 32px;
     margin-right: 16px;
 }
+
+.header {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
