@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -7,7 +8,7 @@ module.exports = {
     output: {
         path: __dirname,
         publicPath: '/',
-        filename: 'dist/bundle.js'
+        filename: 'dist/bundle.[hash].js'
     },
     module: {
                 loaders: [
@@ -18,6 +19,10 @@ module.exports = {
                 {
                     test: /\.css$/,
                     loader: 'style-loader!css-loader'
+                },
+                {
+                    test: /\.html$/,
+                    loader: 'html-loader'
                 },
                 {
                     test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -43,6 +48,13 @@ module.exports = {
             ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: './dist/index.html'
+        }),
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
@@ -52,7 +64,8 @@ module.exports = {
             compress: {
                 warnings: false
             }
-        })
+        }),
+
     ],
     devServer: {
         historyApiFallback: true,
