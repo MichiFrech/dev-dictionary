@@ -11,7 +11,6 @@ class Header extends Component {
                 <img src="img/logo.png" className="logo"/>
                 <b>Dev Dictionary <small>v{chrome.runtime.getManifest().version}</small></b>
             </h1>
-
         );
     }
 }
