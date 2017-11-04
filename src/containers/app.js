@@ -3,6 +3,7 @@ import {Component} from 'react';
 import Header from '../components/header';
 import SearchBar from '../components/searchBar';
 import Technologies from '../components/technologies';
+import Footer from '../components/footer';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchDictionary } from '../actions/fetchDictionary';
@@ -38,6 +39,7 @@ class App extends Component {
                 < Header />
                 < SearchBar onSearchTermChange={this.search} dictionary={this.state.dictionary}/>
                 < Technologies technologies={this.state.filteredList} />
+                < Footer />
             </div >
         );
     }
