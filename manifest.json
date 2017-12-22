@@ -6,7 +6,8 @@
     "default_icon": "img/logo.png"
   },
   "background": {
-    "scripts": ["background_scripts/extension.js"]
+    "scripts": ["background_scripts/jquery.js",
+      "background_scripts/extension.js"]
   },
   "permissions": [
     "contextMenus",
@@ -15,7 +16,8 @@
     "activeTab",
     "webNavigation",
     "storage",
-    "unlimitedStorage"
+    "unlimitedStorage",
+    "http://www.kensplanet.com/*"
   ],
   "icons": {
     "16": "img/logo.png",
