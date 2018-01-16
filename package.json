@@ -1,7 +1,7 @@
 {
   "name": "dev-dictionary",
   "description": "The most trustworthy dictionary and thesaurus for developers",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "author": "Kenneth John (@kensplanet)",
   "license" : "MIT",
   "repository": {
