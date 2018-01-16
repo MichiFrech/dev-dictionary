@@ -19,7 +19,7 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="form-group">
-                <input type="text" onChange = {this.onChange} placeholder="Enter a technology (like React)" className="form-control"/>
+                <input type="text" onChange = {this.onChange} placeholder="Enter a technology (like React)" className="form-control" autoFocus={true}/>
             </div>
         );
     }
