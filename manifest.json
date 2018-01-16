@@ -1,7 +1,7 @@
 {
   "name": "Dev Dictionary",
   "description": "The most trustworthy dictionary and thesaurus for developers",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "browser_action": {
     "default_icon": "img/logo.png"
   },
@@ -16,8 +16,7 @@
     "activeTab",
     "webNavigation",
     "storage",
-    "unlimitedStorage",
-    "http://www.kensplanet.com/*"
+    "unlimitedStorage"
   ],
   "icons": {
     "16": "img/logo.png",

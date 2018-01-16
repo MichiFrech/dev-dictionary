@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const PROXY_URL = "http://www.kensplanet.com/proxy?url=";
+const PROXY_URL = chrome.runtime.getManifest ? "" : chrome.runtime.getManifest;
 
 const TECHNOLOGY_URL = 'http://stackoverflow.com/tags/';
 
